@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>exercise</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <main>
+            <form id="loginForm">
+                <label>Name:<input value="Name" type="text" name="name" id="name" autocomplete="on" required/></label>
+                <label
+                    >Cell Phone: +351 <input value="91998978" type="number" name="cellphone" id="cellphone" autocomplete="on"
+                 required/></label>
+                <section id="sexo">
+                    <p>Sexo: </p>
+                    <label><input checked type="radio" name="sexo" id="feminino" value="feminino" autocomplete="on" required/>Feminino</label>
+                    <label><input type="radio" name="sexo" id="masculino" value="masculino" autocomplete="on" required/>Masculino</label>
+                </section>
+                <label>Email: <input value="asjkajs2akjk@jjdkaj" type="email" name="email" id="email" autocomplete="on" required/></label>
+                <label>Password: <input value="asklaskla" type="password" id="password" autocomplete="on" required/></label>
+                <section id="hobbies">
+                    <p>Hobbies: </p>
+                    <label><input checked type="checkbox" value="music" name="hobbie" id="music" autocomplete="on"/>Music</label>
+                    <label><input type="checkbox"value="cinema" name="hobbie" id="cinema" autocomplete="on"/>Cinema</label>
+                    <label><input checked type="checkbox" value="dance" name="hobbie" id="dance" autocomplete="on"/>Dance</label>
+                    <label
+                        ><input
+                            type="checkbox"
+                            value="photography"
+                            name="hobbie"
+                            id="photography"
+                            autocomplete="on"
+                            disabled
+                        />Photography</label
+                    >
+                </section>
+                <label
+                    >Age: <input type="range" name="age" min="18" max="140" id="age" autocomplete="on"
+                /></label>
+                <input type="submit" value="Submit Query" />
+            </form>
+        </main>
+    <script src="script.js"></script>
+    </body>
+</html>
