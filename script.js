@@ -4,12 +4,14 @@ let infoContainer = document.createElement("div");
 
 infoContainer.style.border = "2px solid orange";
 infoContainer.style.padding = "1rem";
-infoContainer.style.borderStyle = "dotted"; 
+infoContainer.style.borderStyle = "dotted";
 
 loginForm.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    const checkboxArray = Array.from(event.target.hobbie);
+    const checkboxArray = Array.from(
+        event.target.querySelectorAll('input[type="checkbox"]:checked')
+    );
 
     infoContainer.appendChild(createElement("Name", event.target.name.value));
     infoContainer.appendChild(createElement("Age", event.target.age.value));
@@ -19,14 +21,7 @@ loginForm.addEventListener("submit", (event) => {
         createElement("Password", event.target.password.value)
     );
     infoContainer.appendChild(
-        createElement(
-            "Hobbies",
-            convertToText(
-                checkboxArray.filter((checkBox) =>
-                    checkBox.hasAttribute("checked")
-                )
-            )
-        )
+        createElement("Hobbies", convertToText(checkboxArray))
     );
 
     loginForm.appendChild(infoContainer);
