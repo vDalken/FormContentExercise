@@ -49,4 +49,8 @@ input[type="submit"]{
     color: orange;
 }
 
+#photography-label{
+    opacity: .5;
+}
+
 
